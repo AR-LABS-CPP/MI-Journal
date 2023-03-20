@@ -8,6 +8,10 @@ import LoginPage from "./pages/LoginPage"
 
 const router = createBrowserRouter([
   {
+    path: "*",
+    element: <ErrorPage />
+  },
+  {
     path: "/",
     element: <NavBar><LandingPage /></NavBar>,
     errorElement: <ErrorPage />
