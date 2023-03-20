@@ -3,8 +3,7 @@ import LandingPageImage from "../assets/LandingPageImage.png"
 
 const LandingPage: React.FC = () => {
     return (
-        <div className="min-h-screen">
-            <NavBar />
+        <div className="min-h-full">
             <div className="mt-20 w-full flex justify-center items-center gap-x-10">
                 <div className="flex flex-col items-center gap-y-6">
                     <p className="w-64 text-center font-semibold text-gray-600">MI-Journal let's you express your idead and concepts in an intuitive way. Let others see what you have to say, so why wait.</p>
