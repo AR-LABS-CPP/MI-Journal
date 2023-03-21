@@ -1,46 +1,31 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { BrowserRouter, Route, RouterProvider, Routes } from "react-router-dom"
 import NavBar from "./components/NavBar"
-import Blogs from "./pages/Blogs"
-import CreateBlog from "./pages/CreateBlog"
+import FlaskExperience from "./content/FlaskExperience"
 import ErrorPage from "./pages/ErrorPage"
 import LandingPage from "./pages/LandingPage"
-import LoginPage from "./pages/LoginPage"
 
-const router = createBrowserRouter([
+const links = [
   {
-    path: "*",
-    element: <ErrorPage />
-  },
-  {
-    path: "/",
-    element: <NavBar><LandingPage /></NavBar>,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/login",
-    element: <LoginPage />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/blogs",
-    element: <NavBar><Blogs /></NavBar>,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/blog",
-    element: <NavBar><Blogs /></NavBar>,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/blogs/new",
-    element: <NavBar><CreateBlog /></NavBar>,
-    errorElement: <ErrorPage />
+    link: "/content/FlaskExperience",
+    Page: <FlaskExperience />
   }
-])
+]
 
 const App = () => {
   return (
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="*" element={<ErrorPage />} />
+        <Route path="/" element={<LandingPage />} />
+
+        {
+          links.map(l => {
+            return <Route path={l.link} element={l.Page} />
+          })
+        }
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,28 +1,37 @@
-import NavBar from "../components/NavBar"
-import LandingPageImage from "../assets/LandingPageImage.png"
+import ArticleCard from "../components/ArticleCard"
 
 const LandingPage: React.FC = () => {
+    const articles = [
+        {
+            title: "Like a flask",
+            description: "In this article I describe my experience with flask especially when doing token signing",
+            link: "/content/FlaskExperience"
+        }
+    ]
+
     return (
         <div className="min-h-full">
-            <div className="mt-20 w-full flex justify-center items-center gap-x-10">
-                <div className="flex flex-col items-center gap-y-6">
-                    <p className="w-64 text-center font-semibold text-gray-600">MI-Journal let's you express your idead and concepts in an intuitive way. Let others see what you have to say, so why wait.</p>
-                    <button className="bg-primary hover:-translate-y-1 transition-transform duration-300 w-44 rounded-full py-3 text-white font-medium shadow-md">Get Started</button>
+            <div className="mt-20 w-full flex justify-center items-center gap-x-20">
+                <div className="flex flex-col items-center gap-y-3">
+                    <p className="text-2xl font-medium">
+                        Hello there! my name is Ali Raza.
+                    </p>
+                    <p className="w-64 text-center font-semibold text-gray-600">
+                        I am an enthusiastic learner and like to read and write things. This is where I write about random things and experiences with different technologies
+                    </p>
                 </div>
 
-                <img src={LandingPageImage} alt="Landing_Page_Image" />
+                <img src="/Profile.jpg" alt="Profile Picture" className="w-96 h-96 rounded-full border-[1px] border-gray-400" />
             </div>
 
-            <div className="mt-24 flex justify-center gap-x-10">
-                <div className="flex flex-col gap-y-4 justify-center items-center w-96 h-48 px-5 shadow-md border-[1px] rounded-md">
-                    <p className="text-5xl font-semibold text-primary">100% Free</p>
-                    <p className="text-gray-600 text-center w-72">MI-Journal is completely free and you can create as many articles as you want so enjoy the freedom.</p>
-                </div>
+            <div className="border-b-[1px] border-gray-300 mx-5 mt-14"></div>
 
-                <div className="flex flex-col gap-y-4 justify-center items-center w-96 h-48 px-5 shadow-md border-[1px] rounded-md">
-                    <p className="text-5xl font-semibold text-primary">Expressive</p>
-                    <p className="text-gray-600 text-center w-72">MI-Journal lets you be as expressive as possible by letting you format you blog and add images as well.</p>
-                </div>
+            <div className="mt-5 grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {
+                    articles.map(article => {
+                        return <ArticleCard cardTitle={article.title} cardDescription={article.description} linkToArticle={article.link} />
+                    })
+                }
             </div>
         </div>
     )
