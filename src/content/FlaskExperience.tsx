@@ -136,17 +136,7 @@ const FlaskExperience = () => {
                 worry about what a 'cookie' is. Just remember that it will be used in subsequent
                 requests in order to authenticate the user.
             </p>
-
-            <p className="tracking-wide mx-4 mt-4">
-                First let's discuss the login end-point. The login end-point performs token 
-                encoding. We can place any kind of data inside the curly braces but 
-                remember to not put any sensitive information which is why I have put my
-                name and mobile there. See how we use the 'secret' as key. After encoding, we
-                send a response to the request maker and in our response we set a cookie. Don't
-                worry about what a 'cookie' is. Just remember that it will be used in subsequent
-                requests in order to authenticate the user.
-            </p>
-
+            
             <p className="tracking-wide mx-4 mt-4">
                 The decoding part is pretty straight forward as well. We use the 'decode'
                 method provided by 'jwt' and pass it the secret. If it decodes successfully
