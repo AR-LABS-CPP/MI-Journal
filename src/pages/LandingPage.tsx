@@ -11,8 +11,8 @@ const LandingPage: React.FC = () => {
 
     return (
         <div className="min-h-full">
-            <div className="mt-20 w-full flex justify-center items-center gap-x-20">
-                <div className="flex flex-col items-center gap-y-3">
+            <div className="mt-20 w-full flex flex-col-reverse justify-center items-center gap-x-20 sm:flex-row md:flex-row lg:flex-row xl:flex-row">
+                <div className="flex flex-col items-center gap-y-3 mx-5">
                     <p className="text-2xl font-medium">
                         Hello there! my name is Ali Raza.
                     </p>
@@ -21,12 +21,12 @@ const LandingPage: React.FC = () => {
                     </p>
                 </div>
 
-                <img src="/Profile.jpg" alt="Profile Picture" className="w-96 h-96 rounded-full border-[1px] border-gray-400" />
+                <img src="/Profile.jpg" alt="Profile Picture" className="mb-10 w-96 h-96 rounded-full border-[1px] border-gray-400" />
             </div>
 
             <div className="border-b-[1px] border-gray-300 mx-5 mt-14"></div>
 
-            <div className="mt-5 grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="m-5 mt-5 grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {
                     articles.map(article => {
                         return <ArticleCard cardTitle={article.title} cardDescription={article.description} linkToArticle={article.link} />
