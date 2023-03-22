@@ -13,8 +13,8 @@ const LandingPage: React.FC = () => {
     ]
 
     return (
-        <div className={`${darkMode ? "dark" : ""} flex flex-col min-h-full`}>
-            <div className="dark:bg-slate-800 pt-20 w-full flex flex-col-reverse justify-center items-center gap-x-20 sm:flex-row md:flex-row lg:flex-row xl:flex-row">
+        <div className={`${darkMode ? "dark" : ""} flex flex-col min-h-screen`}>
+            <div className="flex-grow dark:bg-slate-800 pt-20 w-full flex flex-col-reverse justify-center items-center gap-x-20 sm:flex-row md:flex-row lg:flex-row xl:flex-row">
                 <div className="flex flex-col items-center gap-y-3 mx-5">
                     <p className="dark:text-gray-300 text-2xl font-medium text-center">
                         Hello there! my name is Ali Raza.
@@ -26,10 +26,9 @@ const LandingPage: React.FC = () => {
 
                 <img src="/Profile.jpg" alt="Profile Picture" className="mb-10 w-80 sm:w-96 md:w-96 lg:w-96 xl-96 rounded-full border-[1px] border-gray-400" />
             </div>
-
             <div className="border-b-[1px] border-gray-400 mx-5"></div>
 
-            <div className="dark:bg-slate-800 pt-7 pb-[115px] grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="dark:bg-slate-800 pt-7 pb-10 grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {
                     articles.map(article => {
                         return <ArticleCard cardTitle={article.title} cardDescription={article.description} linkToArticle={article.link} key={article.link} />
