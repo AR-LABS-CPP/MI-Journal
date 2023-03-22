@@ -1,5 +1,6 @@
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 
 interface ICodeSnippetProps {
     snippet: string
@@ -8,8 +9,11 @@ interface ICodeSnippetProps {
 const CodeSnippet: React.FC<ICodeSnippetProps> = ({ snippet }) => {
     return (
         <>
-            <div className="mx-4 border-[1px] border-gray-300 my-7">
-                <SyntaxHighlighter language="python" style={docco}>
+            <div className="mx-4 border-gray-300 my-7">
+                <SyntaxHighlighter
+                    language='python'
+                    style={dracula}
+                >
                     {snippet}
                 </SyntaxHighlighter>
             </div>

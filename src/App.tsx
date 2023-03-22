@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, RouterProvider, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import NavBar from "./components/NavBar"
 import FlaskExperience from "./content/FlaskExperience"
 import ErrorPage from "./pages/ErrorPage"
@@ -21,7 +21,7 @@ const App = () => {
 
         {
           links.map(l => {
-            return <Route path={l.link} element={l.Page} />
+            return <Route path={l.link} element={l.Page} key={l.link} />
           })
         }
       </Routes>
