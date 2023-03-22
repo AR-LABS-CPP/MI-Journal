@@ -26,7 +26,7 @@ const LandingPage: React.FC = () => {
 
             <div className="border-b-[1px] border-gray-400 mx-5 mt-14"></div>
 
-            <div className="mt-10 grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="my-7 grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
                 {
                     articles.map(article => {
                         return <ArticleCard cardTitle={article.title} cardDescription={article.description} linkToArticle={article.link} />
