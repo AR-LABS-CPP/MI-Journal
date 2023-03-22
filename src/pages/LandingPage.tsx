@@ -31,7 +31,13 @@ const LandingPage: React.FC = () => {
             <div className="dark:bg-slate-800 pt-7 pb-10 grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {
                     articles.map(article => {
-                        return <ArticleCard cardTitle={article.title} cardDescription={article.description} linkToArticle={article.link} key={article.link} />
+                        return <ArticleCard
+                            date="March-03-2023"
+                            cardTitle={article.title}
+                            cardDescription={article.description}
+                            linkToArticle={article.link}
+                            key={article.link}
+                        />
                     })
                 }
             </div>
