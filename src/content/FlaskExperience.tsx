@@ -29,9 +29,9 @@ const FlaskExperience = () => {
 
             return decoded_token
         except jwt.exceptions.InvalidSignatureError:
-            return f"BAD REQUEST!"
+            return "BAD REQUEST!"
         except jwt.exceptions.ExpiredSignatureError:
-            return f"SESSION EXPIRED! LOGIN AGAIN."
+            return "SESSION EXPIRED! LOGIN AGAIN."
 
     @app.get("/login")
     def login():
@@ -138,8 +138,9 @@ const FlaskExperience = () => {
             </p>
             
             <p className="tracking-wide mx-4 mt-4">
-                The decoding part is pretty straight forward as well. We use the 'decode'
-                method provided by 'jwt' and pass it the secret. If it decodes successfully
+                The decoding part is pretty straight forward as well. In my use case, I have
+                separated the decoding login into a separate function in order to avoid repitition.
+                We use the 'decode' method provided by 'jwt' and pass it the secret. If it decodes successfully
                 then we know that the token was not tempared but if it does not decode then
                 the token has been modified.
             </p>
