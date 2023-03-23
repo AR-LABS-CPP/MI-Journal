@@ -20,7 +20,7 @@ const LandingPage: React.FC = () => {
                         Hello there! my name is Ali Raza.
                     </p>
                     <p className="w-64 text-center font-semibold text-gray-600 dark:text-gray-400">
-                        I am an enthusiastic learner and like to read and write things. This is where I write about random things and experiences with different technologies
+                        I am an enthusiastic learner and like to read and write things. This is where I write about random things and my experiences with different technologies
                     </p>
                 </div>
 
