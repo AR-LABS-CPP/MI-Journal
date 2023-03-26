@@ -26,9 +26,12 @@ const LandingPage: React.FC = () => {
 
                 <img src="/Profile.jpg" alt="Profile Picture" className="mb-10 w-80 sm:w-96 md:w-96 lg:w-96 xl-96 rounded-full border-[1px] border-gray-400" />
             </div>
-            <div className="border-b-[1px] border-gray-400 mx-5"></div>
 
-            <div className="dark:bg-slate-800 pt-7 pb-10 grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="px-5 dark:bg-slate-800">
+                <div className="border-b-[1px] border-gray-400"></div>
+            </div>
+
+            <div className="dark:bg-slate-800 pt-7 pb-10 grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
                 {
                     articles.map(article => {
                         return <ArticleCard
