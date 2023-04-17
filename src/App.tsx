@@ -3,11 +3,16 @@ import NavBar from "./components/NavBar"
 import FlaskExperience from "./content/FlaskExperience"
 import ErrorPage from "./pages/ErrorPage"
 import LandingPage from "./pages/LandingPage"
+import MakingItFlow from "./content/MakingItFlow"
 
 const links = [
   {
     link: "/content/FlaskExperience",
     Page: <FlaskExperience />
+  },
+  {
+    link: "/content/MakingItFlow",
+    Page: <MakingItFlow />
   }
 ]
 

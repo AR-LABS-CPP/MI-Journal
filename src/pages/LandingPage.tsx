@@ -6,9 +6,16 @@ const LandingPage: React.FC = () => {
 
     const articles = [
         {
+            date: "March-03-2023",
             title: "Like a flask",
             description: "In this article I describe my experience with flask especially when doing token signing",
             link: "/content/FlaskExperience"
+        },
+        {
+            date: "April-17-2023",
+            title: "Making it flow",
+            description: "In this article I describe how I solved the problem of separating development and production process of several new products using git",
+            link: "/content/MakingItFlow"
         }
     ]
 
@@ -35,7 +42,7 @@ const LandingPage: React.FC = () => {
                 {
                     articles.map(article => {
                         return <ArticleCard
-                            date="March-03-2023"
+                            date={article.date}
                             cardTitle={article.title}
                             cardDescription={article.description}
                             linkToArticle={article.link}
