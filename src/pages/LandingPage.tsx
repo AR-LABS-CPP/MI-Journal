@@ -20,7 +20,7 @@ const LandingPage: React.FC = () => {
         {
             date: "September-06-2023",
             title: "Language Servers",
-            description: "In this short article, I talk about language server and their importance in code editors",
+            description: "In this short article, I talk about language server and their importance in code editors and IDEs",
             link: "/content/LanguageServers"
         }
     ]
