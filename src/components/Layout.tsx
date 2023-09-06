@@ -8,7 +8,7 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
     const darkMode = useThemeStore(state => state.darkMode)
 
     return (
-        <div className={`${darkMode ? "dark" : ""}`}>
+        <div className={`${darkMode ? "dark" : ""} flex-1`}>
             <div className="dark:bg-slate-800 pt-14"></div>
             <div className="dark:bg-slate-800 ">
                 <div className={`dark:bg-slate-800 min-h-full mx-10 border-[1px] border-gray-200 rounded-md px-3 py-5`}>

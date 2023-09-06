@@ -4,6 +4,7 @@ import FlaskExperience from "./content/FlaskExperience"
 import ErrorPage from "./pages/ErrorPage"
 import LandingPage from "./pages/LandingPage"
 import MakingItFlow from "./content/MakingItFlow"
+import LanguageServers from "./content/LanguageServers"
 
 const links = [
   {
@@ -13,6 +14,10 @@ const links = [
   {
     link: "/content/MakingItFlow",
     Page: <MakingItFlow />
+  },
+  {
+    link: "/content/LanguageServers",
+    Page: <LanguageServers />
   }
 ]
 

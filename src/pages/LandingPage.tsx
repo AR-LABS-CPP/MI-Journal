@@ -16,6 +16,12 @@ const LandingPage: React.FC = () => {
             title: "Making it flow",
             description: "In this article I describe how I solved the problem of separating development and production process of several new products using git",
             link: "/content/MakingItFlow"
+        },
+        {
+            date: "September-06-2023",
+            title: "Language Servers",
+            description: "In this short article, I talk about language server and their importance in code editors",
+            link: "/content/LanguageServers"
         }
     ]
 
@@ -38,7 +44,7 @@ const LandingPage: React.FC = () => {
                 <div className="border-b-[1px] border-gray-400"></div>
             </div>
 
-            <div className="dark:bg-slate-800 pt-7 pb-10 grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+            <div className="dark:bg-slate-800 pt-7 mx-10 pb-10 grid place-items-center gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
                 {
                     articles.map(article => {
                         return <ArticleCard
