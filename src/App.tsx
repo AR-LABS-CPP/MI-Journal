@@ -5,6 +5,7 @@ import ErrorPage from "./pages/ErrorPage"
 import LandingPage from "./pages/LandingPage"
 import MakingItFlow from "./content/MakingItFlow"
 import LanguageServers from "./content/LanguageServers"
+import LoginPage from "./pages/LoginPage"
 
 const links = [
   {
@@ -24,11 +25,14 @@ const links = [
 const App = () => {
   return (
     <BrowserRouter>
-      <NavBar />
+      {
+        window.location.pathname !== "/login"
+        &&
+        <NavBar />
+      }
       <Routes>
         <Route path="*" element={<ErrorPage />} />
         <Route path="/" element={<LandingPage />} />
-
         {
           links.map(l => {
             return <Route path={l.link} element={l.Page} key={l.link} />
